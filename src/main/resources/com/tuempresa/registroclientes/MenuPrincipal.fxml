@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tuempresa.registroclientes.controllers.MenuPrincipalController">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="26.0" prefWidth="486.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Clientes">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Formulario" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Servicios">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Solicitud" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Salir">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Salir" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

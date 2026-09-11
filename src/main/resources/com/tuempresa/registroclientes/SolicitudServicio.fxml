@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="650.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tuempresa.registroclientes.controllers.SolicitudServicioController">
+
+    <children>
+
+        <VBox alignment="TOP_LEFT" layoutX="30.0" layoutY="25.0" prefWidth="500.0" spacing="8.0">
+
+            <Label style="-fx-font-size: 22px; -fx-font-weight: bold;" text="SOLICITUD DE SERVICIO">
+            <font>
+               <Font name="Times new roman" size="12.0" />
+            </font></Label>
+
+            <Separator />
+
+            <Label text="Cliente:" />
+
+            <TextField fx:id="txtCliente" prefWidth="400.0" promptText="Ingrese el nombre del cliente" />
+
+            <Label text="Correo del cliente:" />
+
+            <TextField fx:id="txtCorreoCliente" prefWidth="400.0" promptText="Ingrese el correo del cliente" />
+
+            <Label text="Tipo de cliente:" />
+
+            <TextField fx:id="txtTipoCliente" prefWidth="400.0" promptText="Ingrese el tipo de cliente" />
+
+            <Label text="Asunto:" />
+
+            <TextField fx:id="txtAsunto" prefWidth="400.0" promptText="Ingrese el asunto de la solicitud" />
+
+            <Label text="Tipo de servicio:" />
+
+            <ComboBox fx:id="cmbTipoServicio" prefWidth="400.0" promptText="Seleccione un servicio" />
+
+            <Label text="Prioridad:" />
+
+            <HBox alignment="CENTER_LEFT" spacing="15.0">
+
+                <RadioButton fx:id="rbAlta" text="Alta">
+               <toggleGroup>
+                  <ToggleGroup fx:id="prioridad" />
+               </toggleGroup></RadioButton>
+
+                <RadioButton fx:id="rbMedia" text="Media" toggleGroup="$prioridad" />
+
+                <RadioButton fx:id="rbBaja" text="Baja" toggleGroup="$prioridad" />
+
+            </HBox>
+
+            <Label text="Descripción del problema:" />
+
+            <TextArea fx:id="txtDescripcion" prefHeight="100.0" prefWidth="400.0" promptText="Describa el problema" wrapText="true" />
+
+            <Label text="Archivo adjunto:" />
+
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+
+                <TextField fx:id="txtArchivo" editable="false" prefWidth="300.0" />
+
+                <Button onAction="#seleccionarArchivo" text="Seleccionar" />
+            </HBox>
+            <Label text="Carpeta de evidencias:" />
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+                <TextField fx:id="txtCarpeta" editable="false" prefWidth="300.0" />
+                <Button onAction="#seleccionarCarpeta" text="Seleccionar" />
+            </HBox>
+            <Separator />
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+                <Button onAction="#guardarSolicitud" text="Guardar" />
+                <Button onAction="#limpiarFormulario" text="Limpiar" />
+                <Button onAction="#cerrarVentana" text="Cerrar" />
+            </HBox>
+            <Label fx:id="lblMensaje" text="" />
+        </VBox>
+    </children>
+</AnchorPane>
