@@ -4,16 +4,17 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="650.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tuempresa.registroclientes.controllers.SolicitudServicioController">
+<AnchorPane prefHeight="750.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tuempresa.registroclientes.controllers.SolicitudServicioController">
 
     <children>
 
-        <VBox alignment="TOP_LEFT" layoutX="30.0" layoutY="25.0" prefWidth="500.0" spacing="8.0">
+        <VBox alignment="TOP_LEFT" layoutX="30.0" layoutY="25.0" prefHeight="881.0" prefWidth="513.0" spacing="8.0">
 
             <Label style="-fx-font-size: 22px; -fx-font-weight: bold;" text="SOLICITUD DE SERVICIO">
-            <font>
-               <Font name="Times new roman" size="12.0" />
-            </font></Label>
+                <font>
+                    <Font name="Times new roman" size="12.0" />
+                </font>
+            </Label>
 
             <Separator />
 
@@ -42,9 +43,10 @@
             <HBox alignment="CENTER_LEFT" spacing="15.0">
 
                 <RadioButton fx:id="rbAlta" text="Alta">
-               <toggleGroup>
-                  <ToggleGroup fx:id="prioridad" />
-               </toggleGroup></RadioButton>
+                    <toggleGroup>
+                        <ToggleGroup fx:id="prioridad" />
+                    </toggleGroup>
+                </RadioButton>
 
                 <RadioButton fx:id="rbMedia" text="Media" toggleGroup="$prioridad" />
 
@@ -63,19 +65,38 @@
                 <TextField fx:id="txtArchivo" editable="false" prefWidth="300.0" />
 
                 <Button onAction="#seleccionarArchivo" text="Seleccionar" />
+
             </HBox>
+
             <Label text="Carpeta de evidencias:" />
+
             <HBox alignment="CENTER_LEFT" spacing="10.0">
-                <TextField fx:id="txtCarpeta" editable="false" prefWidth="300.0" />
+
+                <TextField fx:id="txtDirectorio" editable="false" prefWidth="300.0" />
+
                 <Button onAction="#seleccionarCarpeta" text="Seleccionar" />
+
             </HBox>
+
             <Separator />
+
             <HBox alignment="CENTER_LEFT" spacing="10.0">
+
                 <Button onAction="#guardarSolicitud" text="Guardar" />
+
                 <Button onAction="#limpiarFormulario" text="Limpiar" />
-                <Button onAction="#cerrarVentana" text="Cerrar" />
+
+                <Button onAction="#cerrarSolicitud" text="Cerrar" />
+
             </HBox>
+
             <Label fx:id="lblMensaje" text="" />
+
+            <Label text="Información de la solicitud:" />
+
+            <TextArea fx:id="txtResultado" editable="false" prefHeight="151.0" prefWidth="514.0" wrapText="true" />
         </VBox>
+
     </children>
+
 </AnchorPane>

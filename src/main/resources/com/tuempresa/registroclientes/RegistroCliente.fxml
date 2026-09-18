@@ -3,37 +3,95 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tuempresa.registroclientes.controllers.RegistroClienteController">
+<AnchorPane prefHeight="600.0"
+            prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.tuempresa.registroclientes.controllers.RegistroClienteController">
 
     <children>
 
-        <VBox layoutX="70.0" layoutY="30.0" prefWidth="460.0" spacing="10.0">
+        <VBox layoutX="70.0"
+              layoutY="30.0"
+              prefWidth="460.0"
+              spacing="10.0">
 
-            <Label style="-fx-font-size: 22px; -fx-font-weight: bold;" text="REGISTRO DE CLIENTES" />
+            <Label style="-fx-font-size: 22px; -fx-font-weight: bold;"
+                   text="REGISTRO DE CLIENTES" />
 
             <Separator />
 
             <Label text="Nombre completo:" />
 
-            <TextField fx:id="txtNombre" promptText="Ingrese el nombre completo" />
+            <TextField fx:id="txtNombre"
+                       promptText="Ingrese el nombre completo" />
 
             <Label text="Correo electrónico:" />
 
-            <TextField fx:id="txtCorreo" promptText="tucorreo@correo.com" />
+            <TextField fx:id="txtCorreo"
+                       promptText="tucorreo@correo.com" />
 
             <Label text="Teléfono:" />
 
-            <TextField fx:id="txtTelefono" promptText="Ingrese el número de teléfono" />
+            <TextField fx:id="txtTelefono"
+                       promptText="Ingrese el número de teléfono" />
 
             <Label text="Tipo de cliente:" />
 
-            <ComboBox fx:id="cmbTipoCliente" prefWidth="460.0" promptText="Seleccione un tipo" />
-            <Separator />
-            <HBox spacing="15.0">
-                <Button onAction="#enviarInformacion" prefWidth="180.0" text="Enviar información" />
-                <Button onAction="#limpiarFormulario" prefWidth="120.0" text="Limpiar" />
+            <ComboBox fx:id="cmbTipoCliente"
+                      prefWidth="460.0"
+                      promptText="Seleccione un tipo" />
+
+            <Label text="Documento de identidad:" />
+
+            <HBox spacing="10.0">
+
+                <TextField fx:id="txtDocumento"
+                           prefWidth="340.0"
+                           promptText="Seleccione un documento"
+                           editable="false" />
+
+                <Button text="Seleccionar"
+                        onAction="#seleccionarDocumento"
+                        prefWidth="110.0" />
+
             </HBox>
-            <Label fx:id="lblMensaje" style="-fx-font-size: 14px;" text="" />
+
+            <Label text="Directorio del cliente:" />
+
+            <HBox spacing="10.0">
+
+                <TextField fx:id="txtDirectorio"
+                           prefWidth="340.0"
+                           promptText="Seleccione un directorio"
+                           editable="false" />
+
+                <Button text="Seleccionar"
+                        onAction="#seleccionarDirectorio"
+                        prefWidth="110.0" />
+
+            </HBox>
+
+            <Separator />
+
+            <HBox spacing="15.0">
+
+                <Button onAction="#enviarInformacion"
+                        prefWidth="180.0"
+                        text="Enviar información" />
+
+                <Button onAction="#limpiarFormulario"
+                        prefWidth="120.0"
+                        text="Limpiar" />
+
+            </HBox>
+
+            <Label fx:id="lblMensaje"
+                   style="-fx-font-size: 14px;"
+                   text="" />
+
         </VBox>
+
     </children>
+
 </AnchorPane>
